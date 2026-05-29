@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -22,7 +21,7 @@ export function Header() {
           <Link href="/#faq" className="hover:text-primary transition-colors">FAQ</Link>
         </div>
 
-        <Button asChild size="sm" className="rounded-full px-6 bg-foreground text-background hover:opacity-90">
+        <Button asChild size="sm" className="rounded-full px-6">
           <Link href="/order">Order Now</Link>
         </Button>
       </div>

@@ -1,4 +1,3 @@
-
 import { Check, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -99,9 +98,7 @@ export function ProductPackages({ hideHeader = false }: ProductPackagesProps) {
               <Button 
                 variant={pkg.highlight ? "default" : "outline"} 
                 className={`w-full py-6 rounded-full font-bold transition-all ${
-                  pkg.highlight 
-                    ? 'bg-primary text-white border-none hover:bg-primary/90' 
-                    : 'border-foreground text-foreground hover:bg-foreground hover:text-background'
+                  !pkg.highlight ? 'border-foreground text-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent' : ''
                 }`}
                 asChild
               >
