@@ -1,3 +1,4 @@
+
 'use server';
 
 import { Resend } from 'resend';
@@ -30,27 +31,27 @@ export async function submitOrder(data: {
     }
 
     const packageNames: Record<string, string> = {
-      pkg1: '1 Pack + 1 Free (₦27,000)',
+      pkg1: '1 Pack + 1 Free (₦25,000) - Launch Special',
       pkg2: '2 Packs + 2 Free (₦44,000) - BEST SELLER',
       pkg3: '10 Packs Bulk (₦105,000)',
     };
 
     const { error } = await resend.emails.send({
-      from: 'Ageless Beauty Orders <onboarding@resend.dev>',
+      from: 'Saam Beauty Orders <onboarding@resend.dev>',
       to: ['cckelles@gmail.com'],
-      subject: `New Order from ${fullName}`,
+      subject: `New Saam Order from ${fullName}`,
       html: `
         <div style="font-family: sans-serif; padding: 20px; color: #333; max-width: 600px; margin: auto; border: 1px solid #eee; border-radius: 10px;">
-          <h1 style="color: #6366f1;">New Order Details</h1>
+          <h1 style="color: #6366f1;">New Saam Order Details</h1>
           <hr style="border: 0; border-top: 1px solid #eee;" />
           <p><strong>Customer Name:</strong> ${fullName}</p>
           <p><strong>Package selected:</strong> ${packageNames[selectedPackage] || selectedPackage}</p>
           <p><strong>Phone:</strong> ${phone}</p>
           <p><strong>WhatsApp:</strong> ${whatsapp || 'N/A'}</p>
           <p><strong>Address:</strong> ${address}</p>
-          <p><strong>Upsell (Botox Solution):</strong> ${upsell ? 'Yes' : 'No'}</p>
+          <p><strong>Upsell (Brightening Serum):</strong> ${upsell ? 'Yes' : 'No'}</p>
           <hr style="border: 0; border-top: 1px solid #eee;" />
-          <p style="font-size: 12px; color: #666;">Submitted via Ageless Beauty Landing Page</p>
+          <p style="font-size: 12px; color: #666;">Submitted via Saam Face Cream Landing Page</p>
         </div>
       `,
     });

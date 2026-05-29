@@ -8,33 +8,33 @@ import { getPlaceholderImage } from "@/lib/placeholder-images";
 
 const reviewsData = [
   {
-    name: "Maria",
-    text: "I was always self-conscious about my neck—what they call the dreaded ‘turkey neck.’ I tried scarves and high collars, but they weren’t real solutions. Then I discovered this neck cream, and within weeks, the sagging skin started to tighten up! Not only that, but the fine lines and crepe-like texture began to smooth out. I finally feel confident wearing V-neck tops again, and I can’t stop recommending this cream to my friends!",
+    name: "Sarah J.",
+    text: "I've tried everything from high-end to drugstore. Saam is the first cream that actually made my skin glow without breaking me out. The texture is amazing and my skin feels so hydrated all day.",
     imageId: "rev-1"
   },
   {
-    name: "Mrs. Enem Bassey",
-    text: "It is Magical, I got mine few days back and I have been applying it, the results is great. I wish i got it earlier instead of wasting money.",
+    name: "Mark T.",
+    text: "The texture is like silk. My fine lines around my eyes are noticeably softer after just two weeks of using Saam. It's now a permanent part of my morning and night routine.",
     imageId: "rev-2"
   },
   {
     name: "Azeezah",
-    text: "I didn’t think a cream could work this well, but my neck feels firmer, and the lines are fading. Now, I use it every day!",
+    text: "I didn’t think a cream could work this well, but my face feels firmer, and the lines are fading. I love that it absorbs instantly without that greasy feeling. Saam is magic!",
     imageId: "rev-3"
   },
   {
-    name: "Mrs. Vivian Nwadi Agbawa",
-    text: "I ordered this product by just clicking on the link on this website and since I started using it, My Neck wrinkles have been fading and I have used one tube so far.",
+    name: "Mrs. Enem Bassey",
+    text: "It is Magical, I got mine few days back and I have been applying it, the results is great. I wish i got it earlier instead of wasting money on products that don't work.",
     imageId: "rev-4"
   },
   {
-    name: "Tare",
-    text: "I never realized how much puffiness around my neck was affecting my appearance. After using this neck cream daily, I noticed a big difference. The swelling went down, and my skin feels firmer and more toned. My coworkers even asked if I’ve been working out—I just smiled and said, ‘Something like that!’ This cream has been a game-changer for me.” Even my husband noticed and asked what I’ve been doing differently! Thanks to the Jaysuing Miracle!",
+    name: "Maria",
+    text: "The sagging skin around my jawline started to tighten up! Not only that, but the fine lines and crepe-like texture began to smooth out. I finally feel radiant again!",
     imageId: "rev-5"
   },
   {
     name: "Clara",
-    text: "I’ve been battling neck wrinkles for years, feeling like nothing would work. But this cream truly delivered. It penetrates deep into the skin, leaving it hydrated and smoother. I’ve seen a noticeable reduction in wrinkles, and the overall appearance of my neck has improved dramatically. People have started guessing my age wrong—in the best way possible!",
+    text: "I’ve been battling fine lines for years. But Saam truly delivered. It penetrates deep into the skin, leaving it hydrated and smoother. People have started guessing my age wrong!",
     imageId: "rev-6"
   }
 ];
@@ -44,12 +44,12 @@ export function Reviews() {
     <section id="reviews" className="py-24 px-4 bg-white/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 space-y-4">
-          <p className="text-sm font-semibold text-primary tracking-widest uppercase">Verified Results</p>
+          <p className="text-sm font-semibold text-primary tracking-widest uppercase">Loved by Enthusiasts</p>
           <h2 className="text-3xl md:text-5xl font-headline font-bold">
-            What Our <span className="accent-italic">Customers Are Saying</span>
+            Real People, <span className="accent-italic">Real Saam Glow</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Real stories from real users across Nigeria.
+            See why thousands are making Saam their daily skin essential.
           </p>
         </div>
 
@@ -69,7 +69,6 @@ export function Reviews() {
                     alt={img.description} 
                     fill 
                     className="object-cover"
-                    data-ai-hint={img.imageHint}
                   />
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-lg">
                     <Facebook className="w-5 h-5 text-[#1877F2] fill-current" />

@@ -13,7 +13,7 @@ export function Header() {
           <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
             <Sparkles className="w-4 h-4" />
           </div>
-          <span>Ageless</span>
+          <span>Saam</span>
         </Link>
         
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-secondary-foreground/70">

@@ -8,25 +8,25 @@ import { CheckCircle2 } from "lucide-react";
 export function ImageShowcase() {
   const largeImg = getPlaceholderImage("showcase-large", {
     imageUrl: "https://picsum.photos/seed/showcase-large/800/800",
-    description: "Product showcase large",
-    imageHint: "skincare result"
+    description: "Saam Transformation",
+    imageHint: "radiant skin"
   });
 
   const gridImages = [
     getPlaceholderImage("showcase-grid-1", {
       imageUrl: "https://picsum.photos/seed/grid1/600/800",
-      description: "Result 1",
-      imageHint: "skincare result"
+      description: "Saam Hydration",
+      imageHint: "hydrated skin"
     }),
     getPlaceholderImage("showcase-grid-2", {
       imageUrl: "https://picsum.photos/seed/grid2/600/800",
-      description: "Result 2",
-      imageHint: "skincare result"
+      description: "Saam Brightness",
+      imageHint: "bright skin"
     }),
     getPlaceholderImage("showcase-grid-3", {
       imageUrl: "https://picsum.photos/seed/grid3/600/800",
-      description: "Result 3",
-      imageHint: "skincare result"
+      description: "Saam Smoothness",
+      imageHint: "smooth skin"
     }),
   ];
 
@@ -42,26 +42,26 @@ export function ImageShowcase() {
               alt={largeImg.description}
               fill
               className="object-cover"
-              data-ai-hint={largeImg.imageHint}
             />
           </div>
           
           {/* Text Side */}
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">
-              Real Transformation
+              Transparency Matters
             </div>
             <h2 className="text-3xl md:text-5xl font-headline font-extrabold leading-tight">
-              See the <span className="accent-italic">Visible Difference</span> in Days
+              What’s <span className="accent-italic">Inside Matters.</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our unique hydrolyzed collagen formula doesn't just sit on the surface. It penetrates deep to restore elasticity and firmness where you need it most.
+              "We believe in clean beauty that actually works. No fillers, no fluff—just results." Saam is formulated with elite concentrations of:
             </p>
-            <ul className="space-y-4">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                "Reduces neck lines and 'turkey neck' sagging",
-                "Deeply hydrates for a smoother texture",
-                "Evens out skin tone and diminishes puffiness"
+                "Hyaluronic Acid for hydration",
+                "Vitamin C for brightness",
+                "Niacinamide to refine pores",
+                "Botanical Extracts to nourish"
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 font-medium text-secondary-foreground">
                   <CheckCircle2 className="w-5 h-5 text-primary" />
@@ -76,8 +76,8 @@ export function ImageShowcase() {
       {/* Section 2: 3 Images Grid */}
       <section className="px-4 max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h3 className="text-2xl font-headline font-bold mb-2">Proven Results Across All Skin Types</h3>
-          <p className="text-muted-foreground">Join thousands of women who have regained their youthful confidence.</p>
+          <h3 className="text-2xl font-headline font-bold mb-2">Real Results from Saam Enthusiasts</h3>
+          <p className="text-muted-foreground">Join the thousands who have found their daily skin essential.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {gridImages.map((img, i) => (
@@ -87,7 +87,6 @@ export function ImageShowcase() {
                 alt={img.description}
                 fill
                 className="object-cover"
-                data-ai-hint={img.imageHint}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
                 <p className="text-white font-bold text-sm">{img.description}</p>

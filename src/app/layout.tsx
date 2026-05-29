@@ -4,8 +4,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'JAYSUING Hydrolyzed Collagen Neck Cream - Ageless Beauty',
-  description: 'Achieve smoother, wrinkle-free skin. Look forever young and happier with our natural collagen neck cream.',
+  title: 'Saam Face Cream - Reveal Your Most Radiant Self',
+  description: 'Saam Face Cream combines potent botanicals with advanced dermatological science to hydrate, firm, and brighten your skin—day and night.',
 };
 
 export default function RootLayout({

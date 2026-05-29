@@ -7,16 +7,16 @@ import Link from "next/link";
 const packages = [
   {
     title: "1 Pack + 1 Free",
-    desc: "Good for a start! Recommended for testing the results.",
+    desc: "Perfect to experience the Saam glow!",
     oldPrice: "30,000",
-    newPrice: "27,000",
-    features: ["45% Discount", "Free Delivery", "Pay on Delivery"],
+    newPrice: "25,000",
+    features: ["Special Launch Discount", "Free Delivery", "Pay on Delivery"],
     tag: "START",
     highlight: false
   },
   {
     title: "2 Packs + 2 Free",
-    desc: "Best Seller! Perfect results with consistent use.",
+    desc: "Best Seller! Recommended for consistent results.",
     oldPrice: "48,000",
     newPrice: "44,000",
     features: ["Massive Savings", "Free Delivery", "Pay on Delivery"],
@@ -34,22 +34,28 @@ const packages = [
   }
 ];
 
-export function ProductPackages() {
+interface ProductPackagesProps {
+  hideHeader?: boolean;
+}
+
+export function ProductPackages({ hideHeader = false }: ProductPackagesProps) {
   return (
-    <section className="py-24 px-4 bg-primary/5">
+    <section id="pricing" className="py-24 px-4 bg-primary/5">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16 space-y-4">
-          <p className="text-sm font-semibold text-primary tracking-widest uppercase">Pricing Plans</p>
-          <h2 className="text-3xl md:text-5xl font-headline font-bold">
-            Choose Your <span className="accent-italic">Package Below</span>
-          </h2>
-        </div>
+        {!hideHeader && (
+          <div className="text-center mb-16 space-y-4">
+            <p className="text-sm font-semibold text-primary tracking-widest uppercase">Pricing Plans</p>
+            <h2 className="text-3xl md:text-5xl font-headline font-bold">
+              Choose Your <span className="accent-italic">Saam Package</span>
+            </h2>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {packages.map((pkg, i) => (
             <div 
               key={i} 
-              className={`relative flex flex-col p-8 rounded-3xl transition-all duration-300 ${
+              className={`relative flex flex-col p-8 rounded-[3rem] transition-all duration-300 ${
                 pkg.highlight 
                   ? 'bg-foreground text-background scale-105 shadow-2xl z-10' 
                   : 'bg-white text-foreground lavender-shadow hover:scale-102'

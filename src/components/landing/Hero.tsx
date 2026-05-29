@@ -4,7 +4,7 @@
 import * as React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Star, Truck, ShieldCheck } from "lucide-react";
+import { Star, ShieldCheck, Leaf, Ban, FlaskConical } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import {
   Carousel,
@@ -60,45 +60,54 @@ export function Hero() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-8 text-center lg:text-left">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wide uppercase">
-            <span className="animate-pulse">●</span> Order Now To Claim 45% Off + Free Delivery
+            <span className="animate-pulse">●</span> Order Now To Claim 15% Off Your First Order
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-headline font-extrabold leading-[1.1] text-foreground">
-            Talk to Your Skin <br />
-            <span className="accent-italic">Anytime, Everywhere.</span>
+          <h1 className="text-4xl md:text-7xl font-headline font-extrabold leading-[1.1] text-foreground">
+            Reveal Your Most <br />
+            <span className="accent-italic">Radiant Self.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-secondary-foreground/80 leading-relaxed max-w-xl mx-auto lg:mx-0">
-            Discover why 2,065+ Nigerian Women are charmed over our Collagen Neck Cream. Guaranteed to help you achieve smoother wrinkle-free skin.
+            Saam Face Cream combines potent botanicals with advanced dermatological science to hydrate, firm, and brighten your skin—day and night.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
             <Button size="lg" className="w-full sm:w-auto rounded-full px-8 py-6 text-lg shadow-xl hover:scale-95 transition-transform" asChild>
-              <Link href="/order">Click Here To Order Now</Link>
+              <Link href="/order">Shop Saam Now</Link>
             </Button>
             <div className="flex flex-col items-center sm:items-start">
               <div className="flex text-amber-400 gap-0.5">
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
               </div>
-              <p className="text-xs font-medium text-muted-foreground">4.8/5.0 Based on 100,000+ Reviews</p>
+              <p className="text-xs font-medium text-muted-foreground">4.9/5.0 Based on Verified Enthusiasts</p>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-primary/10">
-            <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground">
-              <Truck className="w-4 h-4 text-primary" /> Free Delivery
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-primary/10">
+            <div className="flex items-center gap-3 text-xs font-bold text-muted-foreground uppercase tracking-widest">
+              <div className="w-8 h-8 rounded-full bg-primary/5 flex items-center justify-center">
+                <FlaskConical className="w-4 h-4 text-primary" />
+              </div>
+              Dermatologist Tested
             </div>
-            <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground">
-              <ShieldCheck className="w-4 h-4 text-primary" /> 30-Day Guarantee
+            <div className="flex items-center gap-3 text-xs font-bold text-muted-foreground uppercase tracking-widest">
+              <div className="w-8 h-8 rounded-full bg-primary/5 flex items-center justify-center">
+                <Leaf className="w-4 h-4 text-primary" />
+              </div>
+              Cruelty-Free
             </div>
-            <div className="hidden sm:flex items-center gap-2 text-xs font-medium text-muted-foreground">
-              <Star className="w-4 h-4 text-primary" /> Natural Ingredients
+            <div className="flex items-center gap-3 text-xs font-bold text-muted-foreground uppercase tracking-widest">
+              <div className="w-8 h-8 rounded-full bg-primary/5 flex items-center justify-center">
+                <Ban className="w-4 h-4 text-primary" />
+              </div>
+              Paraben-Free
             </div>
           </div>
         </div>
 
         <div className="relative space-y-6">
-          <div className="relative rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl bg-white lg:max-w-md mx-auto">
+          <div className="relative rounded-[3rem] overflow-hidden border-8 border-white shadow-2xl bg-white lg:max-w-md mx-auto">
             <Carousel setApi={setMainApi} className="w-full" opts={{ loop: true }}>
               <CarouselContent>
                 {heroImages.length > 0 ? heroImages.map((img, i) => (
@@ -110,14 +119,13 @@ export function Hero() {
                         fill
                         className="object-cover"
                         priority={i === 0}
-                        data-ai-hint={img.imageHint}
                       />
                     </div>
                   </CarouselItem>
                 )) : (
                   <CarouselItem>
                     <div className="relative aspect-[4/5] bg-muted flex items-center justify-center">
-                      <p className="text-muted-foreground text-sm">Product Image Placeholder</p>
+                      <p className="text-muted-foreground text-sm">Saam Product Showcase</p>
                     </div>
                   </CarouselItem>
                 )}
@@ -145,7 +153,7 @@ export function Hero() {
                   >
                     <div 
                       className={cn(
-                        "relative aspect-square rounded-lg overflow-hidden border-2 transition-all",
+                        "relative aspect-square rounded-xl overflow-hidden border-2 transition-all",
                         selectedIndex === index 
                           ? "border-primary scale-110 shadow-sm" 
                           : "border-transparent opacity-50 hover:opacity-100"

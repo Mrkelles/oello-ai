@@ -11,7 +11,7 @@ export function Footer() {
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
               <Sparkles className="w-5 h-5" />
             </div>
-            <span>AgelessBeauty</span>
+            <span>Saam Beauty</span>
           </div>
           <p className="text-xs text-muted-foreground ml-12">Support: 08137152040</p>
         </div>
@@ -35,7 +35,7 @@ export function Footer() {
         </div>
       </div>
       <div className="text-center mt-12 text-xs text-muted-foreground font-medium">
-        © {new Date().getFullYear()} JAYSUING Hydrolyzed Collagen Neck Cream. All rights reserved.
+        © {new Date().getFullYear()} Saam Face Cream. All rights reserved.
       </div>
     </footer>
   );

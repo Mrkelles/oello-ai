@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -10,7 +11,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Package, Info, ShieldCheck, Phone } from "lucide-react";
+import { Package, Info, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import { getPlaceholderImage } from "@/lib/placeholder-images";
 import { submitOrder } from "@/app/actions/order";
@@ -70,14 +71,14 @@ export function OrderForm() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12 space-y-4">
           <h2 className="text-3xl md:text-5xl font-headline font-bold">
-            Fill the Form to <span className="accent-italic">Place Your Order Now</span>
+            Fill the Form to <span className="accent-italic">Order Saam Now</span>
           </h2>
           <p className="text-muted-foreground">Free Delivery & Pay on Delivery Nationwide</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
-            <Card className="p-8 border-none lavender-shadow bg-white rounded-[2rem]">
+            <Card className="p-8 border-none lavender-shadow bg-white rounded-[2.5rem]">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
@@ -101,12 +102,12 @@ export function OrderForm() {
                 </div>
 
                 <div className="space-y-4">
-                  <Label className="text-lg font-bold">Select Package</Label>
+                  <Label className="text-lg font-bold">Select Saam Package</Label>
                   <RadioGroup value={selectedPkg} onValueChange={setSelectedPkg} className="space-y-3">
                     <div className="flex items-center space-x-3 p-4 border rounded-2xl hover:bg-primary/5 cursor-pointer transition-colors border-primary/20 bg-primary/5">
                       <RadioGroupItem value="pkg1" id="pkg1" />
                       <Label htmlFor="pkg1" className="flex-1 cursor-pointer">
-                        <span className="font-bold">₦27,000</span> — 1 Pack + 1 Free (45% OFF)
+                        <span className="font-bold">₦25,000</span> — 1 Pack + 1 Free (Special Launch)
                       </Label>
                     </div>
                     <div className="flex items-center space-x-3 p-4 border rounded-2xl hover:bg-primary/5 cursor-pointer transition-colors">
@@ -124,7 +125,7 @@ export function OrderForm() {
                   </RadioGroup>
                 </div>
 
-                <div className="p-6 rounded-3xl bg-foreground text-background space-y-4">
+                <div className="p-6 rounded-[2rem] bg-foreground text-background space-y-4">
                   <div className="flex items-start gap-4">
                     <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 border-2 border-primary/30">
                       <Image 
@@ -133,12 +134,11 @@ export function OrderForm() {
                         width={100} 
                         height={100} 
                         className="object-cover" 
-                        data-ai-hint={upsellImg.imageHint}
                       />
                     </div>
                     <div className="flex-1">
                       <h4 className="font-bold text-primary">Special Bonus Offer!</h4>
-                      <p className="text-xs text-background/70">Add our Botox Stock Solution at a 45% Discount! Proven: Get results faster when combined.</p>
+                      <p className="text-xs text-background/70">Add our Brightening Serum at a 45% Discount! Proven: Get results faster when combined.</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
@@ -164,7 +164,7 @@ export function OrderForm() {
           </div>
 
           <div className="space-y-6">
-            <Card className="p-6 border-none lavender-shadow bg-white/50 backdrop-blur-sm rounded-3xl">
+            <Card className="p-6 border-none lavender-shadow bg-white/50 backdrop-blur-sm rounded-[2rem]">
               <h4 className="font-bold mb-4 flex items-center gap-2">
                 <Package className="w-5 h-5 text-primary" /> Why Order Today?
               </h4>
@@ -179,7 +179,7 @@ export function OrderForm() {
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5" />
-                  45% Limited time discount applied.
+                  Special launch discount applied.
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5" />
@@ -188,7 +188,7 @@ export function OrderForm() {
               </ul>
             </Card>
 
-            <Card className="p-8 border-none bg-foreground text-background rounded-3xl space-y-4 text-center">
+            <Card className="p-8 border-none bg-foreground text-background rounded-[2rem] space-y-4 text-center">
               <p className="text-sm font-medium text-primary uppercase tracking-widest">Need Help?</p>
               <div className="text-2xl font-bold">08137152040</div>
               <p className="text-xs text-background/60">Give us a call. Let's help you today!</p>
