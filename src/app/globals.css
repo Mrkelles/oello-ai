@@ -1,30 +1,29 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 239 44% 96%;
-    --foreground: 240 39% 14%;
+    --background: 45 20% 97%;
+    --foreground: 181 40% 12%;
     --card: 0 0% 100%;
-    --card-foreground: 240 39% 14%;
+    --card-foreground: 181 40% 12%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 39% 14%;
-    --primary: 239 69% 60%;
+    --popover-foreground: 181 40% 12%;
+    --primary: 181 100% 27%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 239 44% 92%;
-    --secondary-foreground: 240 39% 14%;
-    --muted: 240 10% 85%;
-    --muted-foreground: 240 10% 45%;
-    --accent: 239 69% 60%;
+    --secondary: 181 20% 92%;
+    --secondary-foreground: 181 100% 27%;
+    --muted: 181 10% 90%;
+    --muted-foreground: 181 10% 45%;
+    --accent: 43 60% 47%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 239 30% 90%;
-    --input: 239 30% 90%;
-    --ring: 239 69% 60%;
-    --radius: 1.25rem;
+    --border: 181 20% 88%;
+    --input: 181 20% 88%;
+    --ring: 181 100% 27%;
+    --radius: 1rem;
   }
 }
 
@@ -34,7 +33,7 @@
   }
   body {
     @apply bg-background text-foreground font-body;
-    background: radial-gradient(ellipse at top-left, #E4E7FF 0%, #EEF0FA 50%, #E8EBFF 100%);
+    background: radial-gradient(circle at top right, #fdfbf7 0%, #f7f9f9 100%);
     min-height: 100vh;
   }
   h1, h2, h3, h4, h5, h6 {
@@ -43,17 +42,17 @@
 }
 
 .lavender-shadow {
-  box-shadow: 0 4px 24px rgba(107, 111, 232, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 132, 137, 0.08);
 }
 
 .lavender-shadow-hover {
-  box-shadow: 0 8px 40px rgba(107, 111, 232, 0.14);
+  box-shadow: 0 8px 40px rgba(0, 132, 137, 0.12);
 }
 
 .accent-italic {
-  @apply italic text-primary;
+  @apply italic text-accent;
 }
 
 .pill-nav {
-  @apply sticky top-4 z-50 mx-auto max-w-fit px-6 py-2 rounded-full border border-primary/10 bg-white/85 backdrop-blur-md shadow-lg flex items-center gap-8;
+  @apply sticky top-4 z-50 mx-auto max-w-fit px-6 py-2 rounded-full border border-primary/10 bg-white/90 backdrop-blur-md shadow-lg flex items-center gap-8;
 }
