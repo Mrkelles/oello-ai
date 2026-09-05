@@ -775,8 +775,8 @@ export default function Page() {
 
             <div className="price-row">
               <div className="plan-name">1 account</div>
-              <div className="amount">₦5,000</div>
-              <div className="per-slot">₦5,000 / account</div>
+              <div className="amount">₦8,000</div>
+              <div className="per-slot">₦8,000 / account</div>
               <div className="row-cta">
                 <a href="#payment" className="btn btn-primary price-cta-btn">
                   Choose
@@ -786,8 +786,8 @@ export default function Page() {
 
             <div className="price-row">
               <div className="plan-name">3 accounts</div>
-              <div className="amount">₦10,000</div>
-              <div className="per-slot">≈ ₦3,333 / account</div>
+              <div className="amount">₦20,000</div>
+              <div className="per-slot">≈ ₦6,666 / account</div>
               <div className="row-cta">
                 <a href="#payment" className="btn btn-primary price-cta-btn">
                   Choose
@@ -799,8 +799,8 @@ export default function Page() {
               <div className="plan-name">
                 5 accounts <span className="tag">Best value</span>
               </div>
-              <div className="amount">₦15,000</div>
-              <div className="per-slot">₦3,000 / account</div>
+              <div className="amount">₦30,000</div>
+              <div className="per-slot">₦6,000 / account</div>
               <div className="row-cta">
                 <a href="#payment" className="btn btn-primary price-cta-btn">
                   Choose
@@ -810,8 +810,8 @@ export default function Page() {
 
             <div className="price-row">
               <div className="plan-name">7 accounts</div>
-              <div className="amount">₦20,000</div>
-              <div className="per-slot">≈ ₦2,857 / account</div>
+              <div className="amount">₦40,000</div>
+              <div className="per-slot">≈ ₦5,714 / account</div>
               <div className="row-cta">
                 <a href="#payment" className="btn btn-primary price-cta-btn">
                   Choose
